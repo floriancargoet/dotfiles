@@ -1,0 +1,13 @@
+#eclipse stuff
+.classpath
+.externalToolBuilders/
+.project
+.settings/
+build/
+bin/
+
+#some binary files
+*.jar
+
+#kate temp files
+*.kate-swp

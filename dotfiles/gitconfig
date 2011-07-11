@@ -1,0 +1,30 @@
+[user]
+	name = Florian Cargoët
+#	empty email is intended. I have 2 main email addresses (work & personal).
+#	I want to set my email explicitly for each repository
+
+[color]
+	diff = auto
+	status = auto
+	branch = auto
+	interactive = auto
+[alias]
+	st = status
+	aliases = !git config --get-regexp 'alias.*' | colrm 1 6 | sed 's/[ ]/ = /'
+	fix = commit --amend
+	unstage = reset HEAD --
+        alias = !sh -c '[ "$#" = 2 ] && git config --global alias."$1" \"$2\"' -
+	last = log -1
+	k = !LANG=en gitk --all 
+	cd = checkout
+	pullff = pull --ff-only
+	g = !gitg --all
+	tags = tag -l
+	conf = !vim ~/.gitconfig
+	rebase-and-stash = !sh -c 'git stash && git rebase $1 && git stash pop' -
+[core]
+	excludesfile = /home/florian/.gitignore
+[diff]
+	tool = meld
+[gui]
+	spellingdictionary = en_US
