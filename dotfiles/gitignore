@@ -11,3 +11,6 @@ bin/
 
 #kate temp files
 *.kate-swp
+
+#lazy ignore pattern
+*.ignore.*
