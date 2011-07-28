@@ -22,6 +22,10 @@
 	tags = tag -l
 	conf = !vim ~/.gitconfig
 	rebase-and-stash = !sh -c 'git stash && git rebase $1 && git stash pop' -
+	mailconfig = !sh -c 'git config user.email $(whiptail --title \"git email configuration\" --menu \"Choose an email address\" 20 78 10 --noitem \
+		\"first@email.address\" 1 \
+		\"second@email.address\" 2 \
+		3>&2 2>&1 1>&3)'
 [core]
 	excludesfile = /home/florian/.gitignore
 [diff]
