@@ -1,0 +1,33 @@
+## ls ##
+alias ls='ls --color=auto'
+alias ll='ls --color=auto -lh'
+
+## dev ##
+alias node-repl="rlwrap node-repl"
+alias webserver="python -m SimpleHTTPServer"
+
+## utils ##
+# quick disk usage summary
+alias dfs="df -h | egrep 'sd|hd' |  awk '{print  \$6 \"\t: \" \$4 \" libres sur \" \$2 \" (\" \$5 \" utilisés)\"}'"
+# winid, useful for recordmydesktop
+alias winid="xwininfo | grep 'Window id'| sed 's/^.*id: \(0x[^ ]\+\).*$/\1/'"
+# i am lazy
+alias update='sudo aptitude update'
+alias upgrade='sudo aptitude safe-upgrade'
+alias i='sudo aptitude install' #do not override existing «install» command
+alias s='aptitude search'
+alias u='update && upgrade'
+#i can't remember the correct name
+alias detach='disown'
+
+## NET ##
+
+alias p="ping www.google.com"
+alias ip='ifconfig | grep "inet adr" --context 1 --color'
+
+
+## ZSH suffixed aliases ##
+alias -s wav="aplay "
+alias -s pdf="kpdf "
+alias -s zip="unzip -l "
+alias -s log="tail -f "
