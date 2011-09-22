@@ -68,7 +68,7 @@ eval $(lesspipe)
 d=.dircolors 
 test -r $d && eval "$(dircolors $d)" # check for .dircolors file and load it with dircolors
 
-#z script
+#z script, a super smart cd
 if [ -f ${HOME}/dev/tools/z/z.sh ]; then
     source ${HOME}/dev/tools/z/z.sh
     function precmd () {
@@ -88,3 +88,6 @@ function git(){
 #import aliases
 source ~/.shell_aliases #shared aliases between different shells
 source ~/.shell_aliases_private #you don't need that ;-)
+
+#rvm
+[[ -s "/home/florian/.rvm/scripts/rvm" ]] && source "/home/florian/.rvm/scripts/rvm"
