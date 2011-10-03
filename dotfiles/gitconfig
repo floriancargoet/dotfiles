@@ -15,10 +15,10 @@
 	unstage = reset HEAD --
         alias = !sh -c '[ "$#" = 2 ] && git config --global alias."$1" \"$2\"' -
 	last = log -1
-	k = !LANG=en gitk --all 
+	k = !LANG=en gitk --all & 
 	cd = checkout
 	pullff = pull --ff-only
-	g = !gitg --all
+	g = !gitg --all &
 	tags = tag -l
 	conf = !vim ~/.gitconfig
 	rebase-and-stash = !sh -c 'git stash && git rebase $1 && git stash pop' -
