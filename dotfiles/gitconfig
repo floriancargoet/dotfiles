@@ -18,6 +18,7 @@
 	k = !LANG=en gitk --all & 
 	cd = checkout
 	pullff = pull --ff-only
+	pulf =  pull --ff-only
 	g = !gitg --all &
 	tags = tag -l
 	conf = !vim ~/.gitconfig
