@@ -14,6 +14,8 @@ classes/
 *.kate-swp
 *.sublime*
 *.swp
+*.sublime*
+*.geany
 
 #node
 node_modules/
