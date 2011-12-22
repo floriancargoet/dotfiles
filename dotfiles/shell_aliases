@@ -21,7 +21,6 @@ alias u='update && upgrade'
 alias detach='disown'
 
 ## NET ##
-
 alias p="ping www.google.com"
 alias ip='ifconfig | grep "inet adr" --context 1 --color'
 
@@ -31,3 +30,9 @@ alias -s wav="aplay "
 alias -s pdf="kpdf "
 alias -s zip="unzip -l "
 alias -s log="tail -f "
+
+## others ##
+if [ "x$DESKTOP_SESSION" = "xxubuntu" ]; then
+    #nautilus for XFCE, without desktop rendering
+    alias nautilus='nautilus --no-desktop'
+fi
