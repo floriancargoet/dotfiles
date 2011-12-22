@@ -5,15 +5,19 @@
 .settings/
 build/
 bin/
+classes/
 
 #some binary files
 *.jar
 
-#kate temp files
+#text editors files
 *.kate-swp
+*.sublime*
+*.swp
+
+#node
+node_modules/
 
 #lazy ignore pattern
 *.ignore.*
 
-#sublimetext
-*.sublime*
