@@ -1,4 +1,5 @@
 # For complete documentation of this file, please see Geany's main documentation
+
 [styling]
 # foreground;background;bold;italic - used for filetype All/None
 default=0xffffff;0x1e1e1e;false;false
@@ -84,3 +85,8 @@ line_wrap_indent=0;0;false;false
 # which characters should be skipped when moving (or included when deleting) to word boundaries
 # should always include space and tab (\s\t)
 whitespace_chars=\s\t!\"#$%&'()*+,-./:;<=>?@[\\]^`{|}~
+
+[build-menu]
+FT_00_LB=markdown
+FT_00_CM=markdown %f > %e.html
+FT_00_WD=

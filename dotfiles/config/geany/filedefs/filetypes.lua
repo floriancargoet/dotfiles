@@ -1,4 +1,5 @@
 # For complete documentation of this file, please see Geany's main documentation
+
 [styling]
 # foreground;background;bold;italic
 default=0xffffff;0x1E1E1E;false;false
@@ -70,3 +71,8 @@ context_action_cmd=
 # (use only one of it at one time)
 compiler=
 run_cmd=lua "%f"
+
+[build-menu]
+FT_00_LB=love
+FT_00_CM=love-unstable "%d"
+FT_00_WD=
