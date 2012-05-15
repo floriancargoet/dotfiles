@@ -56,6 +56,7 @@ export EDITOR=/usr/bin/vim
 #add ~/bin to PATH
 export PATH=${PATH}:${HOME}/bin/
 
+
 #PATH where cd search a directory. works with completion.
 #export CDPATH='~:/tmp'
 
@@ -85,9 +86,35 @@ function git(){
     fi
 }
 
+function cdd(){
+    if [ "x$1" != "x" ]; then
+        short_pwd=$(basename $(pwd))
+        while [ "$short_pwd" != "$1" ] &&
+              [ "$short_pwd" != "/" ]; do
+            cd ..
+            short_pwd=$(basename $(pwd))
+        done
+    else
+        echo 'Usage: cdd dirname'
+    fi
+}
+
 #import aliases
 source ~/.shell_aliases #shared aliases between different shells
 source ~/.shell_aliases_private #you don't need that ;-)
 
-#rvm
-[[ -s "/home/florian/.rvm/scripts/rvm" ]] && source "/home/florian/.rvm/scripts/rvm"
+#dev stuff
+export DOCXA_DEBUG=↑↑↓↓←→←→BA #activate debug mode in docxa stuff
+export DOCXA_BUILD_CONF=/home/florian/dev/docxa_projects/Tools/configurator/userconf.rb
+
+[[ -s $HOME/.rvm/scripts/rvm ]] && source $HOME/.rvm/scripts/rvm
+
+
+#keys
+bindkey "^[[1;5D" backward-word
+bindkey "^[[1;5C" forward-word
+
+#sencha tools
+export PATH=$PATH:/opt/SenchaSDKTools-2.0.0-beta3/
+export SENCHA_SDK_TOOLS_2_0_0_BETA3=/opt/SenchaSDKTools-2.0.0-beta3
+

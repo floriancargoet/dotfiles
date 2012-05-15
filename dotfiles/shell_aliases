@@ -11,6 +11,7 @@ alias webserver="python -m SimpleHTTPServer"
 alias dfs="df -h | egrep 'sd|hd' |  awk '{print  \$6 \"\t: \" \$4 \" libres sur \" \$2 \" (\" \$5 \" utilisés)\"}'"
 # winid, useful for recordmydesktop
 alias winid="xwininfo | grep 'Window id'| sed 's/^.*id: \(0x[^ ]\+\).*$/\1/'"
+
 # packages
 alias update='sudo aptitude update'
 alias upgrade='sudo aptitude safe-upgrade'
@@ -22,11 +23,16 @@ alias dl='dpkg -l'
 
 #alternative names (yes, aliases)
 alias ack='ack-grep'
+
+
+alias x='chmod +x'
+
+#i can't remember the correct name
 alias detach='disown'
 
 ## NET ##
 alias p="ping www.google.com"
-alias ip='ifconfig | grep "inet adr" --context 1 --color'
+alias myip='ifconfig | grep "inet adr" --context 1 --color'
 
 
 ## ZSH suffixed aliases ##
