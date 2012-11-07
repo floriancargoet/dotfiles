@@ -30,6 +30,8 @@
 		3>&2 2>&1 1>&3)'
 	wdiff = diff --color-words
 	pop = stash pop
+	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --
+	fixauthor = commit --amend --reset-author
 [core]
 	excludesfile = /home/florian/.gitignore
 [diff]
@@ -41,5 +43,14 @@
 	default = tracking
 [dude]
 	icon = /home/florian/.git-dude/git_logo.png
-[rerere]
-	enabled = 1
+[help]
+	autocorrect = 20
+[guitool "Geany"]
+	cmd = geany $FILENAME
+[guitool "Remove trailing spaces"]
+	cmd = sed -i 's/[ \\t]*$//' $FILENAME
+	noconsole = yes
+[guitool "Delete"]
+	cmd = rm $FILENAME
+	noconsole = yes
+	needsfile = yes

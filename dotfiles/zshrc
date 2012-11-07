@@ -57,6 +57,8 @@ export EDITOR=/usr/bin/vim
 export PATH=${PATH}:${HOME}/bin/
 
 
+export WORDCHARS='*?_-[]~=&;!#$%^(){}<>'
+
 #PATH where cd search a directory. works with completion.
 #export CDPATH='~:/tmp'
 
@@ -107,8 +109,8 @@ source ~/.shell_aliases_private #you don't need that ;-)
 export DOCXA_DEBUG=↑↑↓↓←→←→BA #activate debug mode in docxa stuff
 export DOCXA_BUILD_CONF=/home/florian/dev/docxa_projects/Tools/configurator/userconf.rb
 
+#rvm
 [[ -s $HOME/.rvm/scripts/rvm ]] && source $HOME/.rvm/scripts/rvm
-
 
 #keys
 bindkey "^[[1;5D" backward-word
@@ -118,3 +120,5 @@ bindkey "^[[1;5C" forward-word
 export PATH=$PATH:/opt/SenchaSDKTools-2.0.0-beta3/
 export SENCHA_SDK_TOOLS_2_0_0_BETA3=/opt/SenchaSDKTools-2.0.0-beta3
 
+# scala
+export PATH=$PATH:/opt/sbt/bin/

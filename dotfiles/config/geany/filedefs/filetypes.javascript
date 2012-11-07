@@ -64,11 +64,11 @@ run=
 
 
 [build-menu]
-FT_00_LB=jshint
-FT_00_CM=jshint %f
+FT_00_LB=rake build_js
+FT_00_CM=rake build_js
 FT_00_WD=
 FT_01_LB=jshint *.js
-FT_01_CM=jshint %d/*.js
+FT_01_CM=jshint %f
 FT_01_WD=
 error_regex=(.+): line ([0-9]+),.*
 EX_00_LB=_Exécuter

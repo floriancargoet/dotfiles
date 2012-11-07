@@ -74,5 +74,5 @@ run_cmd=lua "%f"
 
 [build-menu]
 FT_00_LB=love
-FT_00_CM=love-unstable "%d"
+FT_00_CM=love "%d"
 FT_00_WD=
