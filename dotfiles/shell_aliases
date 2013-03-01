@@ -5,7 +5,7 @@ alias ll='ls --color=auto -lh'
 ## dev ##
 alias node-repl="rlwrap node-repl"
 alias webserver="python -m SimpleHTTPServer"
-alias open-all-the-javascripts="find -name '*.js' | xargs geany &"
+alias open-all-the-javascripts="find -name '*.js' | xargs geany -i &"
 
 ## utils ##
 # quick disk usage summary

@@ -1,5 +1,5 @@
 [user]
-	name = Florian Cargoët
+	name = Florian Cargoët\n
 #	empty email is intended. I have 2 main email addresses (work & personal).
 #	I want to set my email explicitly for each repository
 
@@ -9,6 +9,7 @@
 	branch = auto
 	interactive = auto
 	ui = true
+	sh = auto
 [alias]
 	st = status -sb
 	aliases = !git config --get-regexp 'alias.*' | colrm 1 6 | sed 's/[ ]/ = /'
@@ -32,6 +33,7 @@
 	pop = stash pop
 	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --
 	fixauthor = commit --amend --reset-author
+	upbase = !sh -c 'git stash && git rebase -i "@{u}" && git stash pop'
 [core]
 	excludesfile = /home/florian/.gitignore
 [diff]
@@ -39,6 +41,8 @@
 [gui]
 	spellingdictionary = en_US
 	diffcontext = 6
+	editor = geany
+	historybrowser = gitg
 [push]
 	default = tracking
 [dude]
@@ -54,3 +58,5 @@
 	cmd = rm $FILENAME
 	noconsole = yes
 	needsfile = yes
+[merge]
+	tool = meld

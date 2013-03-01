@@ -36,6 +36,9 @@ zstyle ':completion:*' cache-path ~/.zsh_cache
 zmodload zsh/complist
 zstyle ':completion:*:*:kill:*:processes' list-colors "=(#b) #([0-9]#)*=36=31"
 
+#custom git commands
+zstyle ':completion:*:git:*' user-commands ${${(k)commands[(I)git-*]}#git-}
+
 # Correction
 setopt correctall
 
@@ -83,6 +86,8 @@ fi
 function git(){
     if [ $1 = 'root' ]; then
         cd $(git rev-parse --show-toplevel)
+    elif [ $1 = 'gui' ]; then
+        /usr/bin/git gui &
     else
         /usr/bin/git $* 
     fi
@@ -99,6 +104,12 @@ function cdd(){
     else
         echo 'Usage: cdd dirname'
     fi
+}
+
+# auto ls after cd or autocd
+function chpwd() {
+    emulate -L zsh # http://stackoverflow.com/questions/3964068/zsh-automatically-run-ls-after-every-cd
+    ls
 }
 
 #import aliases
